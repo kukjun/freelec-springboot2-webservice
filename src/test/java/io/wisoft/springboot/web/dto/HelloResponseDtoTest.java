@@ -16,8 +16,8 @@ public class HelloResponseDtoTest {
         HelloResponseDto dto = new HelloResponseDto(name, amount);
 
         //then
-        assertSame(dto.getName(), name);
-        assertSame(dto.getAmount(), amount);
+        assertEquals(dto.getName(), name);
+        assertEquals(dto.getAmount(), amount);
 
     }
 
