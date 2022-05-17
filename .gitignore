@@ -2,5 +2,7 @@
 /.gradle/
 /.idea/
 /.gradle/
+/gradle/
 /build/
 /out/
+resources/application-oauth.yml
