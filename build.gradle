@@ -2,6 +2,14 @@ plugins {
     id 'java'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class':"io.wisoft.springboot.Application"
+        )
+    }
+}
+
 group 'io.wisoft'
 version '1.0-SNAPSHOT'
 
