@@ -25,6 +25,9 @@ dependencies {
 //    annotationProcessor 등록을 통해서 배포환경에서 lombok 적용될 수 있도록 함.
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
+//    mariaDB 사용을 위한 드라이버 의존 등록
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
+
 
 //    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
 //    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
