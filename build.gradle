@@ -1,13 +1,6 @@
 plugins {
     id 'java'
-}
-
-jar {
-    manifest {
-        attributes(
-                'Main-Class':"io.wisoft.springboot.Application"
-        )
-    }
+    id 'org.springframework.boot' version '2.6.7'
 }
 
 group 'io.wisoft'
@@ -20,12 +13,12 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.6.7'
     implementation 'org.springframework.boot:spring-boot-starter-test:2.6.7'
-    implementation 'junit:junit:4.13.1'
-    implementation 'org.projectlombok:lombok:1.18.24'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.7'
-    implementation 'com.h2database:h2:2.1.212'
     implementation 'org.springframework.boot:spring-boot-starter-mustache:2.6.7'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client:2.6.7'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.7'
+    implementation 'junit:junit:4.13.1'
+    implementation 'org.projectlombok:lombok:1.18.24'
+    implementation 'com.h2database:h2:2.1.212'
     implementation 'org.springframework.session:spring-session-jdbc:2.6.3'
     implementation 'org.springframework.security:spring-security-test:5.6.3'
 
