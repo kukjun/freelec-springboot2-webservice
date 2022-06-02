@@ -1,6 +1,7 @@
 language: java
 jdk:
   - openjdk11
+
 branches:
   only:
     - main
@@ -10,6 +11,7 @@ cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
+
 script: "./gradlew clean build"
 
 # S3 업로드를 위한 절차
@@ -25,7 +27,7 @@ deploy:
     bucket: kukjun-springboot-build
     region: ap-northeast-2
     skip_cleanup: true
-    acl: private # zip 파일 접근을 private 로
+    acl: private # zip 파일 접근을 private 으로
     local_dir: deploy # before_deploy 에서 생성한 디렉토리
     wait-until-deployed: true
     on:
@@ -37,8 +39,8 @@ deploy:
     bucket: kukjun-springboot-build
     key: freelec-springboot2-webservice.zip # make zip file
     bundle_type: zip # 압축 확장자
-    application: freelec-sprinboot2-webservice # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
-    deployment_group: freelec-springboot2-webservice-group # 웹 콘솔에서 등록한 CodleDeploy 배포 그룹
+    application: sprinboot2-webservice # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
+    deployment_group: springboot2-webservice-group # 웹 콘솔에서 등록한 CodleDeploy 배포 그룹
     region: ap-northeast-2
     wait-until-deployed: true
 
