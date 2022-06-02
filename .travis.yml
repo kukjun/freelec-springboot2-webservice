@@ -15,7 +15,7 @@ script: "./gradlew clean build"
 # S3 업로드를 위한 절차
 before_deploy:
   - zip -r freelec-springboot2-webservice *
-  - mkdir -p depoly
+  - mkdir -p deploy
   - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
 
 deploy:
@@ -37,4 +37,3 @@ notifications:
   email:
     recipients:
       - 'lxx3380@gmail.com'
-
