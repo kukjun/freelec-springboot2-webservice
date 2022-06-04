@@ -3,8 +3,12 @@ plugins {
     id 'org.springframework.boot' version '2.6.7'
 }
 
+jar {
+    enabled(false)
+}
+
 group 'io.wisoft'
-version '1.0.1-SNAPSHOT'
+version '1.0.1-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
 
 repositories {
     mavenCentral()
